@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  line-bot:
+    build: .
+    image: line-bot-image:0.0.1
+# volumes：開発時のみ実行。本番時は削除
+#     volumes:
+#       - /c/Users/nttdata/01_app/myDocker/supervisord:/etc/supervisor/conf.d
+#       - /c/Users/nttdata/01_app/myDocker/war:/usr/local/tomcat/webapps #nttd application
+    ports:
+      - "8080:8080" #tomcat
